@@ -1,6 +1,10 @@
 # -*- conding:utf-8 -*-
 import unittest
 class TestStringMethods(unittest.TestCase):
+    def setUp(self):
+        print('setup,hello')    #在每个测试方法执行前被调用
+    def tearDown(self):
+        print('tearDown,bye!')
     def test_upper(self):
         self.assertEqual('xiaoli'.upper(),'XIAOLI')  #判断两个值是否相等
 
