@@ -37,4 +37,4 @@ class Test(unittest.TestCase):
         res = self.run.run_main(url,None,None,headers,'post')
         print(res)
         self.assertEqual(res['code'],'200','返回状态错误，不为200')
-        print("这是第二个测试方法")
+        print("test-two")
