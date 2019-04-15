@@ -20,3 +20,10 @@ class TestStringMethods(unittest.TestCase):
 
         if __name__ == '__main__':
             unittest.main()
+
+class TestDict(unittest.TestCase):
+    def test_init(self):
+        d = test_mydict(a=2,b='test')
+        self.assertEquals(d.a,2)
+        self.assertEquals(d.b,'test')
+        self.assertTrue(d.isupper(dict))
