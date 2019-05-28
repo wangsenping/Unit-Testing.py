@@ -5,11 +5,11 @@ import requests
 import ddt,unittest,json
 import HtmlTestRunner
 # from read_data import Excel
-import xlrd
+import xlrd,xlwt
 
 class Excel:
     def get_datas(self):
-        xl = xlrd.open_workbook(r'D:\zdh-csyl\data.xls')
+        xl = xlrd.open_workbook(r'D:/测试用例/test-1')
         sheet = xl.sheet_by_name("修改")
         items = sheet,row_values(0)
         datas = []
@@ -49,5 +49,5 @@ if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTests(unittest.TestLoader().loadTestsFromName("wnboss.WNBoss"))
     with open("testReport.html", "wb") as f:
-        runner = HTMLTestRunner.HTMLTestRunner(stream=f, verbosity=3, title="xxxx接口测试报告")
+        runner = HTMLTestRunner.HTMLTestRunner(stream=f, verbosity=3, title="融合商城接口测试报告")
         runner.run(suite)

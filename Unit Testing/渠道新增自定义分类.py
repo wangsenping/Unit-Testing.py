@@ -1,11 +1,11 @@
 # -*- conding:utf-8 -*-
 import requests
-url = "http://192.168.2.237:8118/gs_mall_channel_mk_admin/admin/channelCustomCategory/addCustomCategory"
+url = "http://192.168.2.237:8118/gs_mall_channel_mk_admin/admin/channelCustomCategory/insertCategory"
 querystring = {"channelId":"125"}
-payload = "{\r\n\"channelId\":\"125\",\r\n " \
+payload = "{\r\n\"channelId\":\"135\",\r\n "\
           "\"name\":\"test2\",\r\n " \
           "\"channelName\":\"ceshi\",\r\n " \
-          "\"pid\":\"0\",\r\n  " \
+          "\"pid\":\"85\",\r\n  " \
           "\"type\":\"2\",\r\n  " \
           "\"display\":\"1\",\r\n " \
           "\"imgUrl\":\"http://www.baidu.com/\",\r\n " \
@@ -22,4 +22,4 @@ headers = {
     'cache-control': "no-cache",
     }
 response = requests.request("GET",url,data=payload, headers=headers, params=querystring)
-print(response.text)
+print(response.json())
