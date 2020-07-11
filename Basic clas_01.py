@@ -32,4 +32,4 @@ while n <= 100:
     print(n)
     n = n + 1
 
-print('都结束了，还搞毛呀')
+print('都结束了呀')
